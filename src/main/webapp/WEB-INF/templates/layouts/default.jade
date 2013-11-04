@@ -13,6 +13,8 @@ html
     div(data-role="page")
       div(data-role="header")
         h1= headline
-        a(href="#" data-icon="reload" class="ui-btn-right") Reload
+        a#reload(href="#" data-icon="reflesh" class="ui-btn-right") Reload
       div(data-role="content")
         != body
+  :javascript
+    $('#reload').click(function(){location.reload()})
