@@ -1,7 +1,7 @@
 - attributes("title") = "WikipediaRandom"
 - attributes("headline") = "WikipediaRandom"
 -@ val pages: List[List[String]]
-ul(data-role="listview")
+ul.mdl-list
   =for(page<-pages)
-    li
+    li.mdl-list__item
       a(href={page.tail.head})= page.head
