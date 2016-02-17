@@ -10,6 +10,7 @@ html
     link(rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css")
     script(defer src="https://code.getmdl.io/1.1.1/material.min.js")
     script(src="http://code.jquery.com/jquery-1.9.1.min.js")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       header.mdl-layout__header
@@ -18,7 +19,9 @@ html
           div.mdl-layout-spacer
           nav.mdl-navigation
             a.mdl-navigation__link#reload(href="#") Reload
-    div.mdl-layout
-      != body
+      main.mdl-layout__content
+        div.mdl-grid
+          div.mdl-cell.mdl-cell--2-col
+            != body
   :javascript
     $('#reload').click(function(){location.reload()})
